@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
+import * as actions from '../../Actions/index';
 import './index.css';
 
 class News extends Component {
+  constructor(props){
+    super(props)
+  }
+  componentDidMount() {
+    let propsParam = this.props,
+        path = this.props.params.location.pathname;
+    actions.getData(path,propsParam);
+  }
   render() {
     return (
        <div>
