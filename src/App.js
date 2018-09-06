@@ -7,6 +7,9 @@ import { connect } from "react-redux";
 import * as actions from "./Actions";
 import Newest from './Containers/Newest';
 import News from './Containers/News';
+import Jobs from './Containers/Jobs';
+import Ask from './Containers/Ask';
+import Show from './Containers/Show';
 
 import './App.css';
 
@@ -24,33 +27,55 @@ class Main extends Component {
             <h1 className="App-title">Welcome to React</h1>
           </header>
           <ul>
-            <li><Link to="/news">News</Link></li>
-            <li><Link to="/newest">Newest</Link></li>
+            <li><Link to="/news/1">News</Link></li>
+            <li><Link to="/newest/1">Newest</Link></li>
+            <li><Link to="/show/1">Show</Link></li>
+            <li><Link to="/ask/1">Ask</Link></li>
+            <li><Link to="/jobs/1">Jobs</Link></li>
           </ul>
-          <BrowserRouter>
-          <Switch>
-            <Route exact
-              path="/newest/:id"
-              render={props => (
-                <Newest params={props} {...this.props} />
-              )}
-            />
+            <Switch>
+              <Route exact
+                path="/newest/:id"
+                render={props => (
+                  <Newest params={props} {...this.props} />
+                )}
+              />
 
-            <Route
-              exact
-              path="/news/:id"
-              render={props => (
-                <News params={props} {...this.props} />
-              )}
-            />
-          </Switch>
-        </BrowserRouter>  
+              <Route
+                exact
+                path="/news/:id"
+                render={props => (
+                  <News params={props} {...this.props} />
+                )}
+              />
+              <Route
+                exact
+                path="/ask/:id"
+                render={props => (
+                  <Ask params={props} {...this.props} />
+                )}
+              />
+              <Route
+                exact
+                path="/show/:id"
+                render={props => (
+                  <Show params={props} {...this.props} />
+                )}
+              />
+              <Route
+                exact
+                path="/jobs/:id"
+                render={props => (
+                  <Jobs params={props} {...this.props} />
+                )}
+              />
+            </Switch> 
 
           {/* <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.
           </p> */}
         </div>
-      </BrowserRouter>
+      </BrowserRouter>    
     );
   }
 }

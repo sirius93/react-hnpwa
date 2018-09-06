@@ -6,14 +6,22 @@ export const getData = (path, props) => {
         page = path.split('/')[1];
         ajax(url).
         then(data => {
-            console.log(page)
             switch(page){
                 case 'newest':
                     props.dispatch({ type: "FETCH_NEWEST_DATA_SUCCESS", payload: data })
                     break;
                 case 'news':  
                     props.dispatch({ type: "FETCH_NEWS_DATA_SUCCESS", payload: data })
-                    break;  
+                    break;
+                case 'show':  
+                    props.dispatch({ type: "FETCH_SHOW_DATA_SUCCESS", payload: data })
+                    break;
+                case 'ask':  
+                    props.dispatch({ type: "FETCH_ASK_DATA_SUCCESS", payload: data })
+                    break;
+                case 'jobs':  
+                    props.dispatch({ type: "FETCH_JOBS_DATA_SUCCESS", payload: data })
+                    break;             
                 default: 
                     console.log('error')    
             }

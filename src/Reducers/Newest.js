@@ -8,7 +8,7 @@ const Newest = (state = [], action) => {
           message: ""
         };
         break;
-      case "FETCH_NEWEST_DATA_SUCCESS_FAILURE":
+      case "FETCH_NEWEST_DATA_FAILURE":
         return {
           ...state,
           comments: {},

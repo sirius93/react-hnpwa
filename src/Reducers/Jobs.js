@@ -1,13 +1,13 @@
-const News = (state = [], action) => {
+const Jobs = (state = [], action) => {
     switch (action.type) {
-      case "FETCH_NEWS_DATA_SUCCESS":
+      case "FETCH_JOBS_DATA_SUCCESS":
         return {
           ...state,
           status: true,
           message: "Data fetch success"
         };
         break;
-      case "FETCH_NEWS_DATA_FAILURE":
+      case "FETCH_JOBS_DATA_FAILURE":
         return {
           ...state,
           status: false,
@@ -20,4 +20,4 @@ const News = (state = [], action) => {
     }
   };
   
-  export default News;
+  export default Jobs;
