@@ -10,6 +10,8 @@ import News from './Containers/News';
 import Jobs from './Containers/Jobs';
 import Ask from './Containers/Ask';
 import Show from './Containers/Show';
+import Navbar from './Components/Navbar';
+import Header from './Components/Header';
 
 import './App.css';
 
@@ -22,17 +24,8 @@ class Main extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to React</h1>
-          </header>
-          <ul>
-            <li><Link to="/news/1">News</Link></li>
-            <li><Link to="/newest/1">Newest</Link></li>
-            <li><Link to="/show/1">Show</Link></li>
-            <li><Link to="/ask/1">Ask</Link></li>
-            <li><Link to="/jobs/1">Jobs</Link></li>
-          </ul>
+          <Header/>
+          <Navbar/>
             <Switch>
               <Route exact
                 path="/newest/:id"
@@ -70,10 +63,6 @@ class Main extends Component {
                 )}
               />
             </Switch> 
-
-          {/* <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p> */}
         </div>
       </BrowserRouter>    
     );
@@ -81,7 +70,11 @@ class Main extends Component {
 }
 function mapStateToProps(store) {
   return {
-    Newest : store.response
+    newest : store.Newest,
+    news : store.News,
+    show : store.Show,
+    ask : store.Ask,
+    jobs : store.Jobs
   };
 }
 

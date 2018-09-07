@@ -2,14 +2,14 @@ const News = (state = [], action) => {
     switch (action.type) {
       case "FETCH_NEWS_DATA_SUCCESS":
         return {
-          ...state,
+          news:action.payload,
           status: true,
           message: "Data fetch success"
         };
         break;
       case "FETCH_NEWS_DATA_FAILURE":
         return {
-          ...state,
+          news:[],
           status: false,
           message: action.error
         };

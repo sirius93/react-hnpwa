@@ -1,0 +1,27 @@
+@import '../../Utils//variables.scss';
+.Header-container{
+    background-color: $primary-background;
+    height: 60px;
+    .Header{ 
+        .Header-logo{
+            float: left;
+            margin-top: 10px;
+            display: inline-block;
+            width: 2.5em;
+            margin-left: 200px;
+        }
+        h3{
+            margin: 0;
+            float: left;
+            margin-left: 20px;
+            margin-top: .75em;
+            color: $white;
+            letter-spacing: 1px;
+            font-size: 2em;
+            span{
+                font-weight: normal;
+                font-size: 0.75rem;
+            }
+        }
+    }
+}

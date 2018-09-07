@@ -2,16 +2,14 @@ const Newest = (state = [], action) => {
     switch (action.type) {
       case "FETCH_NEWEST_DATA_SUCCESS":
         return {
-          ...state,
-          comments: action.comments,
+          newest:action.payload,
           status: true,
           message: ""
         };
         break;
       case "FETCH_NEWEST_DATA_FAILURE":
         return {
-          ...state,
-          comments: {},
+          newest:[],
           status: false,
           message: action.error
         };

@@ -1,0 +1,30 @@
+@import '../../Utils//variables.scss';
+
+ul.Nav-container {
+    list-style: none;
+    display: flex;
+    max-height: 5em;
+    padding: 0.5em;
+    box-shadow: 0 2px 3px rgba(10,10,10,.1);
+    li:not(:last-child) {
+        margin-right: 1em;
+        font-size: 1.25em;
+        a{
+            text-decoration: none;
+        }
+        &:hover{
+            border-bottom: 1px solid $primary-background;
+        }
+    }
+    li:first-child {
+        padding-left: 200px;
+        margin-right: 0;
+        &:hover{
+            border-bottom: none;
+        }
+    }
+    li.Page-number{
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
