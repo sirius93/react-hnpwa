@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component,Fragment } from 'react';
 import logo from './logo.svg';
 import routes from './Routes/index';
 import { BrowserRouter, Route, Switch, Redirect, Link, } from "react-router-dom";
@@ -12,6 +12,9 @@ import Ask from './Containers/Ask';
 import Show from './Containers/Show';
 import Navbar from './Components/Navbar';
 import Header from './Components/Header';
+import Previous from './Components/buttons/previous';
+import Next from './Components/buttons/next';
+import Back from './Components/buttons/Back';
 
 import './App.css';
 
@@ -26,6 +29,15 @@ class Main extends Component {
         <div className="App">
           <Header/>
           <Navbar/>
+          <Route
+            render={props => (
+              <Fragment>
+                <Back exact params={props}/>
+                <Previous exact params={props} {...this.props}/>
+                <Next exact params={props} {...this.props}/>
+              </Fragment>
+            )}
+          />
             <Switch>
               <Route exact
                 path="/newest/:id"
