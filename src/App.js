@@ -27,11 +27,11 @@ class Main extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Header/>
-          <Navbar/>
           <Route
             render={props => (
               <Fragment>
+                <Header exact params={props}/>
+                <Navbar exact params={props}/>
                 <Back exact params={props}/>
                 <Previous exact params={props} {...this.props}/>
                 <Next exact params={props} {...this.props}/>

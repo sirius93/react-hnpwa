@@ -8,6 +8,7 @@ class Navbar extends Component {
     super(props)
   }
   render() {
+    let pageNumber = this.props.params.location.pathname.split('/')[2];
     return (
         <ul className="Nav-container">
             <li className="Nav-items"></li>
@@ -18,7 +19,7 @@ class Navbar extends Component {
             <li className="Nav-items"><Link to="/jobs/1">Jobs</Link></li>
             <li className="Page-number"></li>
             <li className="Page-number"></li>
-            <li className="Page-number"><span className="static-text">Page</span><span>1</span></li>
+            <li className="Page-number"><span className="static-text">Page</span><span>{pageNumber}</span></li>
         </ul> 
     );
   }
