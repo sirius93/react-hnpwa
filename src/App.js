@@ -40,7 +40,7 @@ class Main extends Component {
           />
             <Switch>
               <Route exact
-                path="/newest/:id"
+                path="/react-hnpwa/newest/:id"
                 render={props => (
                   <Newest params={props} {...this.props} />
                 )}
@@ -48,32 +48,33 @@ class Main extends Component {
 
               <Route
                 exact
-                path="/news/:id"
+                path="/react-hnpwa/news/:id"
                 render={props => (
                   <News params={props} {...this.props} />
                 )}
               />
               <Route
                 exact
-                path="/ask/:id"
+                path="/react-hnpwa/ask/:id"
                 render={props => (
                   <Ask params={props} {...this.props} />
                 )}
               />
               <Route
                 exact
-                path="/show/:id"
+                path="/react-hnpwa/show/:id"
                 render={props => (
                   <Show params={props} {...this.props} />
                 )}
               />
               <Route
                 exact
-                path="/jobs/:id"
+                path="/react-hnpwa/jobs/:id"
                 render={props => (
                   <Jobs params={props} {...this.props} />
                 )}
               />
+              <Redirect path="**"  to="/react-hnpwa/news/1"/>
             </Switch> 
         </div>
       </BrowserRouter>    
