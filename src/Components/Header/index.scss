@@ -2,13 +2,19 @@
 .Header-container{
     background-color: $primary-background;
     height: 60px;
+    @media only screen and (max-width: 991px) {
+       height: 5em;
+    } 
     .Header{ 
         .Header-logo{
             float: left;
             margin-top: 10px;
             display: inline-block;
-            width: 2.5em;
+            width: 2em;
             margin-left: 200px;
+            @media only screen and (max-width: 991px) {
+                margin-left: 1em;
+            }  
         }
         h3{
             margin: 0;
@@ -21,7 +27,15 @@
             span{
                 font-weight: normal;
                 font-size: 0.75rem;
+                @media only screen and (max-width: 991px) {
+                    display: none;
+                } 
             }
+            @media only screen and (max-width: 991px) {
+                margin-left: 1em;
+                margin-left: 0.5em;
+                font-size: 1.5em;
+            }    
         }
     }
 }

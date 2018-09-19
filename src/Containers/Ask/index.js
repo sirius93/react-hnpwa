@@ -16,10 +16,6 @@ class Ask extends Component {
     let ListData = this.props ? this.props.ask.ask : '';
     return (
        <div>
-           <p className="App-intro">
-                To get started, edit <code>Ask/index.js</code> and save to reload.
-
-            </p>
             <List params={ListData}></List>
        </div>    
     );

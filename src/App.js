@@ -32,15 +32,16 @@ class Main extends Component {
               <Fragment>
                 <Header exact params={props}/>
                 <Navbar exact params={props}/>
-                <Back exact params={props}/>
+                {/* <Back exact params={props}/> */}
                 <Previous exact params={props} {...this.props}/>
                 <Next exact params={props} {...this.props}/>
               </Fragment>
             )}
           />
-            <Switch>
+          <div className="container">
+          <Switch>
               <Route exact
-                path="/react-hnpwa/newest/:id"
+                path="/newest/:id"
                 render={props => (
                   <Newest params={props} {...this.props} />
                 )}
@@ -48,34 +49,35 @@ class Main extends Component {
 
               <Route
                 exact
-                path="/react-hnpwa/news/:id"
+                path="/news/:id"
                 render={props => (
                   <News params={props} {...this.props} />
                 )}
               />
               <Route
                 exact
-                path="/react-hnpwa/ask/:id"
+                path="/ask/:id"
                 render={props => (
                   <Ask params={props} {...this.props} />
                 )}
               />
               <Route
                 exact
-                path="/react-hnpwa/show/:id"
+                path="/show/:id"
                 render={props => (
                   <Show params={props} {...this.props} />
                 )}
               />
               <Route
                 exact
-                path="/react-hnpwa/jobs/:id"
+                path="/jobs/:id"
                 render={props => (
                   <Jobs params={props} {...this.props} />
                 )}
               />
-              <Redirect path="**"  to="/react-hnpwa/news/1"/>
+              <Redirect path="**"  to="/news/1"/>
             </Switch> 
+          </div>
         </div>
       </BrowserRouter>    
     );

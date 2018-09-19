@@ -2,8 +2,8 @@ import  Apis  from '../Configs/Apis';
 import { ajax } from '../Utils'
 
 export const getData = (path, props) => {
-        let page = path.split('/')[2],
-        id = path.split('/')[3],
+        let page = path.split('/')[1],
+        id = path.split('/')[2],
         url = `${Apis.HN_BASE_API}/${page}/${id}.json`;
         console.log(page,url);
         ajax(url).

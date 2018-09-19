@@ -16,10 +16,7 @@ class News extends Component {
     let ListData = this.props ? this.props.news.news : '';
     return (
        <div>
-           <p className="App-intro">
-                To get started, edit <code>News/index.js</code> and save to reload.
-            </p>
-            <List params={ListData}></List>  
+          <List params={ListData}></List>  
        </div>    
     );
   }

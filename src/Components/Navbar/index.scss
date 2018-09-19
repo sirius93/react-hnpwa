@@ -27,4 +27,24 @@ ul.Nav-container {
         margin-left: auto;
         margin-right: auto;
     }
+    @media only screen and (max-width: 991px) {
+        li:not(:last-child) {
+            margin-right: 1em;
+            font-size: 1.25em;
+            a{
+                text-decoration: none;
+            }
+            &:hover{
+                border-bottom: 1px solid $primary-background;
+            }
+        }
+        li:first-child {
+            padding-left: 1em;
+        }
+        li.Page-number{
+            position: absolute;
+            right: 1em;
+            top: 1.75em;
+        }
+    }
   }

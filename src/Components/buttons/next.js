@@ -10,9 +10,9 @@ class Next extends Component {
   }
   HandleClick(){
     let propsParam = this.props,
-        Nextid = parseInt(propsParam.params.location.pathname.split('/')[3]) + 1,
-        pathname = propsParam.params.location.pathname.split('/')[2],
-        NextUrl =  `/react-hnpwa/${pathname}/${Nextid}`;
+        Nextid = parseInt(propsParam.params.location.pathname.split('/')[2]) + 1,
+        pathname = propsParam.params.location.pathname.split('/')[1],
+        NextUrl =  `/${pathname}/${Nextid}`;
     propsParam.params.history.push(NextUrl);
     actions.getData(NextUrl,propsParam);
   }

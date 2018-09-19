@@ -10,9 +10,9 @@ class Previous extends Component {
   }
   HandleClick(){
     let propsParam = this.props,
-        Previd = parseInt(propsParam.params.location.pathname.split('/')[3]) > 1 ? parseInt(propsParam.params.location.pathname.split('/')[3]) - 1 : 1,
-        pathname = propsParam.params.location.pathname.split('/')[2],
-        PrevUrl =  `/react-hnpwa/${pathname}/${Previd}`;
+        Previd = parseInt(propsParam.params.location.pathname.split('/')[2]) > 1 ? parseInt(propsParam.params.location.pathname.split('/')[2]) - 1 : 1,
+        pathname = propsParam.params.location.pathname.split('/')[1],
+        PrevUrl =  `/${pathname}/${Previd}`;
     propsParam.params.history.push(PrevUrl);
     actions.getData(PrevUrl,propsParam);
   }

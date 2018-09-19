@@ -16,10 +16,7 @@ class Newest extends Component {
     let ListData = this.props ? this.props.newest.newest : '';
     return ( 
        <div>
-        <p className="App-intro">
-          To get started, edit <code>Newest/index.js</code> and save to reload.
-        </p>
-        <List params={ListData}></List>
+          <List params={ListData}></List>
        </div>   
     );
   }
