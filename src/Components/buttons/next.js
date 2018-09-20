@@ -21,7 +21,7 @@ class Next extends Component {
     return (
         <div className="Fixed-button-container Next" onClick={this.HandleClick}>
             <div className="Button Next">
-                &gt;
+              &#10095;
             </div>
         </div>
     );

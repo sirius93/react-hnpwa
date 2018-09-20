@@ -1,9 +1,31 @@
 @import './utils/variables.scss';
 .News-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px gray solid;
     .News-list{
+        display: flex;
+        border-bottom: 1px solid gray;
         .News-points{
             font-size: 1.5em;
-            display: inline-block;
+            display: flex;
+            padding: 0.5em;
+            padding: 0.5em 1em;
+            width: 3em;
+        }
+        .News-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            padding: 1em;
+            text-align: left;
+            .News-title{
+                padding-bottom: 1em;
+            }
+            .News-details{
+                padding-bottom: 1em;
+            }
         }
     }
 }

@@ -1,50 +1,54 @@
 @import '../../Utils//variables.scss';
-
-ul.Nav-container {
-    list-style: none;
+.Nav-container{
+    width: 100vw;
     display: flex;
-    max-height: 5em;
-    padding: 0.5em;
+    justify-content: space-around;
+    max-height: 4em;
     box-shadow: 0 2px 3px rgba(10,10,10,.1);
-    li:not(:last-child) {
-        margin-right: 1em;
-        font-size: 1.25em;
-        a{
-            text-decoration: none;
+    margin: auto;
+    ul.Navbar {
+        list-style: none;
+        display: inline-flex;
+        padding-left: 0;
+        &.left{
+            float: left;
         }
-        &:hover{
-            border-bottom: 1px solid $primary-background;
+        &.right{
+            float: right;
         }
-    }
-    li:first-child {
-        padding-left: 200px;
-        margin-right: 0;
-        &:hover{
-            border-bottom: none;
-        }
-    }
-    li.Page-number{
-        margin-left: auto;
-        margin-right: auto;
-    }
-    @media only screen and (max-width: 991px) {
-        li:not(:last-child) {
-            margin-right: 1em;
+        li{
             font-size: 1.25em;
+            margin-right: 1em;
+            padding-bottom: 1.6em;
             a{
                 text-decoration: none;
+                color: $primary-background;
             }
             &:hover{
-                border-bottom: 1px solid $primary-background;
+                border-bottom: 3px solid #5cdb95;
+                padding-bottom: 1.6em;
             }
         }
-        li:first-child {
-            padding-left: 1em;
-        }
         li.Page-number{
-            position: absolute;
-            right: 1em;
-            top: 1.75em;
+            margin-left: auto;
+            margin-right: auto;
         }
-    }
-  }
+        @media only screen and (max-width: 991px) {
+            li {
+                margin-right: 1em;
+                font-size: 1.25em;
+                a{
+                    text-decoration: none;
+                }
+                &:hover{
+                    border-bottom: 1px solid $primary-background;
+                }
+            }
+            li.Page-number{
+                position: absolute;
+                right: 1em;
+                top: 1.75em;
+            }
+        }
+      }
+}

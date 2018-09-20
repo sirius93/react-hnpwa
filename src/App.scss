@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  display: block;
+  overflow: hidden;
+  width: 100vw;
+}
+.containers{
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
 }
 
 @keyframes App-logo-spin {

@@ -38,45 +38,47 @@ class Main extends Component {
               </Fragment>
             )}
           />
-          <div className="container">
-          <Switch>
-              <Route exact
-                path="/newest/:id"
-                render={props => (
-                  <Newest params={props} {...this.props} />
-                )}
-              />
+          <div className="containers">
+            <div className="container">
+              <Switch>
+                  <Route exact
+                    path="/newest/:id"
+                    render={props => (
+                      <Newest params={props} {...this.props} />
+                    )}
+                  />
 
-              <Route
-                exact
-                path="/news/:id"
-                render={props => (
-                  <News params={props} {...this.props} />
-                )}
-              />
-              <Route
-                exact
-                path="/ask/:id"
-                render={props => (
-                  <Ask params={props} {...this.props} />
-                )}
-              />
-              <Route
-                exact
-                path="/show/:id"
-                render={props => (
-                  <Show params={props} {...this.props} />
-                )}
-              />
-              <Route
-                exact
-                path="/jobs/:id"
-                render={props => (
-                  <Jobs params={props} {...this.props} />
-                )}
-              />
-              <Redirect path="**"  to="/news/1"/>
-            </Switch> 
+                  <Route
+                    exact
+                    path="/news/:id"
+                    render={props => (
+                      <News params={props} {...this.props} />
+                    )}
+                  />
+                  <Route
+                    exact
+                    path="/ask/:id"
+                    render={props => (
+                      <Ask params={props} {...this.props} />
+                    )}
+                  />
+                  <Route
+                    exact
+                    path="/show/:id"
+                    render={props => (
+                      <Show params={props} {...this.props} />
+                    )}
+                  />
+                  <Route
+                    exact
+                    path="/jobs/:id"
+                    render={props => (
+                      <Jobs params={props} {...this.props} />
+                    )}
+                  />
+                  <Redirect path="**"  to="/newest/1"/>
+                </Switch> 
+            </div>
           </div>
         </div>
       </BrowserRouter>    

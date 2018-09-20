@@ -2,6 +2,8 @@
 .Header-container{
     background-color: $primary-background;
     height: 60px;
+    display: flex;
+    justify-content: space-around;
     @media only screen and (max-width: 991px) {
        height: 5em;
     } 
@@ -11,7 +13,6 @@
             margin-top: 10px;
             display: inline-block;
             width: 2em;
-            margin-left: 200px;
             @media only screen and (max-width: 991px) {
                 margin-left: 1em;
             }  
