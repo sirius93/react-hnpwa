@@ -5,26 +5,30 @@
     display: flex;
     justify-content: space-around;
     @media only screen and (max-width: 991px) {
-       height: 5em;
+       height: 4em;
+       .container{
+           padding: 0.5em 0 0 0;
+       }
     } 
     .Header{ 
         .Header-logo{
             float: left;
-            margin-top: 10px;
+            margin: 5px 0;
             display: inline-block;
             width: 2em;
             @media only screen and (max-width: 991px) {
-                margin-left: 1em;
+                margin: 0em .25em 1em .5em;
             }  
         }
         h3{
             margin: 0;
             float: left;
-            margin-left: 20px;
-            margin-top: .75em;
+            margin-left: 10px;
+            margin-top: .25em;
             color: $white;
             letter-spacing: 1px;
             font-size: 2em;
+            font-weight: 500;
             span{
                 font-weight: normal;
                 font-size: 0.75rem;
@@ -33,7 +37,6 @@
                 } 
             }
             @media only screen and (max-width: 991px) {
-                margin-left: 1em;
                 margin-left: 0.5em;
                 font-size: 1.5em;
             }    

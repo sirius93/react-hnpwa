@@ -20,7 +20,7 @@ class Navbar extends Component {
             <li className="Nav-items"><Link to="/jobs/1">Jobs</Link></li>
           </ul>
           <ul className="Navbar right">
-            <li className="Page-number"><span className="static-text">Page</span><span>{pageNumber}</span></li>
+            <li className="Page-number"><span className="static-text">Page</span><span className="number">{pageNumber}</span></li>
           </ul>  
         </div>
       </div>

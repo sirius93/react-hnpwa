@@ -14,8 +14,14 @@ body {
   max-width: 1152px;
   @media only screen and (max-width: 1024px) {
     max-width: 1025px;
-    padding: 1em;
     overflow: hidden;
     width: 100vw;
 }
+}
+@media only screen and (max-width: 1024px) {
+  .containers{
+    .container > div {
+      padding: 1em;
+    }
+  }
 }

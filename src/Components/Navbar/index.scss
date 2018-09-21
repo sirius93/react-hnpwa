@@ -6,10 +6,16 @@
     max-height: 4em;
     box-shadow: 0 2px 3px rgba(10,10,10,.1);
     margin: auto;
+    @media only screen and (max-width: 991px) {
+        .container{
+            padding: 0 0 0 1em;
+        }
+    }
     ul.Navbar {
         list-style: none;
         display: inline-flex;
         padding-left: 0;
+        margin: 0;
         &.left{
             float: left;
         }
@@ -17,37 +23,78 @@
             float: right;
         }
         li{
-            font-size: 1.25em;
+            font-size: 1em;
             margin-right: 1em;
-            padding-bottom: 1.6em;
+            padding: 1em 5px;
             a{
                 text-decoration: none;
                 color: $primary-background;
             }
             &:hover{
-                border-bottom: 3px solid #5cdb95;
-                padding-bottom: 1.6em;
+                background-color: $primary-background;
+                a{
+                    color: $white;
+                }
             }
         }
         li.Page-number{
             margin-left: auto;
             margin-right: auto;
+            .static-text{
+                background-color: $primary-background;
+                padding: .5em;
+                border-radius: 5px 0 0 5px;
+                color: $white;
+            }
+            .number{
+                padding: .5em;
+                border-radius: 0 5px 5px 0;
+                background-color: grey;
+                // opacity: 0.5;
+                color: $white;
+            }
+            &:hover{
+                background-color: unset;
+            }
         }
         @media only screen and (max-width: 991px) {
             li {
-                margin-right: 1em;
+                margin-right: .5em;
+                padding-left: 5px;
+                padding-right: 5px;
                 font-size: 1.25em;
                 a{
                     text-decoration: none;
                 }
                 &:hover{
-                    border-bottom: 1px solid $primary-background;
+                    background-color: $primary-background;
+                    a{
+                        color: $white;
+                    }
+                }
+                &:focus{
+                    background-color: $primary-background;
+                    a{
+                        color: $white;
+                    }
                 }
             }
             li.Page-number{
                 position: absolute;
-                right: 1em;
-                top: 1.75em;
+                right: .5em;
+                top: 0em;
+                .static-text{
+                    background-color: $white;
+                    padding: .25em;
+                    border-radius: 5px 0 0 5px;
+                }
+                .number{
+                    padding: .25em;
+                    border-radius: 0 5px 5px 0;
+                    background-color: grey;
+                    // opacity: 0.5;
+                    color: $white;
+                }
             }
         }
       }
