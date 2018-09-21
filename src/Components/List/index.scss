@@ -10,8 +10,14 @@
             font-size: 1.5em;
             display: flex;
             padding: 0.5em;
-            padding: 0.5em 1em;
+            padding: 1em 0.5em 0 0.5em;
             width: 3em;
+            margin: 0;
+            @media only screen and (max-width: 1024px) {
+                padding: 3em 0.5em 0em 0.5em;
+                width: 2em;
+                font-size: 1em;
+            }
         }
         .News-content{
             display: flex;
@@ -20,11 +26,23 @@
             align-items: start;
             padding: 1em;
             text-align: left;
+            @media only screen and (max-width: 1024px) {
+                font-size: 1em;
+            }
             .News-title{
-                padding-bottom: 1em;
+                padding-bottom: 0.5em;
             }
             .News-details{
-                padding-bottom: 1em;
+                padding-bottom: 0.5em;
+                a{
+                    text-decoration: none;
+                }
+            }
+            .comments{
+                padding-bottom: 0;
+                a{
+                    text-decoration: none;
+                }
             }
         }
     }
